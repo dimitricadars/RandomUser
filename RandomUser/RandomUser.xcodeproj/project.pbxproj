@@ -92,6 +92,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64B0A8EA279716F600D47CF3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				64FCDF062796F41800A6E48F /* RandomUserListTableViewController.swift */,
+				64FCDF082796F4AF00A6E48F /* RandomUserCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		64B0A8EB2797172400D47CF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64FCDF0A2796F61C00A6E48F /* RandomUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		64B0A8EC2797173000D47CF3 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				64FCDF0E2796F7D000A6E48F /* RandomUserListViewModel.swift */,
+				64FCDF102796F82B00A6E48F /* RandomUserViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		64B0A8ED2797174B00D47CF3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64FCDF122796F9F300A6E48F /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		64B0A8EE2797175A00D47CF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				64FCDF0C2796F73F00A6E48F /* RequestManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		64FCDECA2796F3E900A6E48F = {
 			isa = PBXGroup;
 			children = (
@@ -115,20 +157,18 @@
 		64FCDED52796F3E900A6E48F /* RandomUser */ = {
 			isa = PBXGroup;
 			children = (
+				64B0A8ED2797174B00D47CF3 /* Utils */,
 				64FCDF142797088D00A6E48F /* Extensions */,
+				64B0A8EC2797173000D47CF3 /* View Models */,
+				64B0A8EB2797172400D47CF3 /* Models */,
+				64B0A8EA279716F600D47CF3 /* Controllers */,
+				64B0A8EE2797175A00D47CF3 /* Services */,
 				64FCDED62796F3E900A6E48F /* AppDelegate.swift */,
 				64FCDED82796F3E900A6E48F /* SceneDelegate.swift */,
 				64FCDEDC2796F3E900A6E48F /* Main.storyboard */,
 				64FCDEDF2796F3EA00A6E48F /* Assets.xcassets */,
 				64FCDEE12796F3EA00A6E48F /* LaunchScreen.storyboard */,
 				64FCDEE42796F3EA00A6E48F /* Info.plist */,
-				64FCDF062796F41800A6E48F /* RandomUserListTableViewController.swift */,
-				64FCDF082796F4AF00A6E48F /* RandomUserCell.swift */,
-				64FCDF0A2796F61C00A6E48F /* RandomUser.swift */,
-				64FCDF0C2796F73F00A6E48F /* RequestManager.swift */,
-				64FCDF0E2796F7D000A6E48F /* RandomUserListViewModel.swift */,
-				64FCDF102796F82B00A6E48F /* RandomUserViewModel.swift */,
-				64FCDF122796F9F300A6E48F /* Constants.swift */,
 			);
 			path = RandomUser;
 			sourceTree = "<group>";
