@@ -19,9 +19,7 @@ class RandomUserListViewModel {
         
         let url = Constants.Urls.urlForRandomUsers()
         
-        RequestManager.fetchData(url: url) {
-            
-            (response: Result<RandomUserResponse?,NetworkError>) in
+        RequestManager.fetchData(url: url) { (response: Result<RandomUserResponse?,NetworkError>) in
             
             DispatchQueue.main.async {
                 
@@ -36,6 +34,29 @@ class RandomUserListViewModel {
                
                 case .failure(let error):
                     completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    func getRandomUsersFromFile(completion: @escaping (Result<[RandomUserViewModel],Error>) -> Void) {
+        
+        if let data = ParseManager.readLocalFile(forName: "data") {
+            ParseManager.parse(jsonData: data) {  (response: Result<RandomUserResponse?,NetworkError>) in
+                DispatchQueue.main.async {
+                    
+                    switch response {
+                        
+                    case .success(let data):
+                        
+                        if let results = data?.results {
+                            let arrayOfRandomUserViewModel = results.map{RandomUserViewModel(randomUser: $0)}
+                            completion(.success(arrayOfRandomUserViewModel))
+                        }
+                   
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 }
             }
         }

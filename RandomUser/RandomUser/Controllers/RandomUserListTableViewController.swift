@@ -22,19 +22,36 @@ class RandomUserListTableViewController : UITableViewController {
         let loader = self.loader()
         
         randomUserListViewModel.getRandomUsers {[weak self] result in
-            
+
             switch result {
-                
+
             case .success(let arrayOfRandomUserViewModel):
                 self?.randomUserListViewModel.randomUserViewModels = arrayOfRandomUserViewModel
                 self?.tableView.reloadData()
                 self?.stopLoader(loader: loader)
-                
+
             case .failure:
                 self?.stopLoader(loader: loader)
                 self?.displayAlert(message: "Désolé, quelque chose s'est mal passé dans la récupération des données. Veuillez réessayer plus tard",title: "Error")
             }
         }
+//**********************
+// FROM JSON LOCAL FILE
+//**********************
+        
+//        randomUserListViewModel.getRandomUsersFromFile { [weak self] result in
+//            switch result {
+//
+//            case .success(let arrayOfRandomUserViewModel):
+//                self?.randomUserListViewModel.randomUserViewModels = arrayOfRandomUserViewModel
+//                self?.tableView.reloadData()
+//                self?.stopLoader(loader: loader)
+//
+//            case .failure:
+//                self?.stopLoader(loader: loader)
+//                self?.displayAlert(message: "Désolé, quelque chose s'est mal passé dans la récupération des données. Veuillez réessayer plus tard",title: "Error")
+//            }
+//        }
     }
 }
 
@@ -59,7 +76,7 @@ extension RandomUserListTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
-        if let cell = sender as? RandomUserCell {
+        if let cell =   sender as? RandomUserCell {
             let i = tableView.indexPath(for: cell)!.row
             if segue.identifier == "showDetail" {
                 let vc = segue.destination as! RandomUserDetailViewController
