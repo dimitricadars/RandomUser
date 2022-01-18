@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64B0A8F02797192400D47CF3 /* RandomUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B0A8EF2797192400D47CF3 /* RandomUserDetailViewController.swift */; };
 		64FCDED72796F3E900A6E48F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCDED62796F3E900A6E48F /* AppDelegate.swift */; };
 		64FCDED92796F3E900A6E48F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCDED82796F3E900A6E48F /* SceneDelegate.swift */; };
 		64FCDEDE2796F3E900A6E48F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCDEDC2796F3E900A6E48F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64B0A8EF2797192400D47CF3 /* RandomUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewController.swift; sourceTree = "<group>"; };
 		64FCDED32796F3E900A6E48F /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FCDED62796F3E900A6E48F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FCDED82796F3E900A6E48F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				64FCDF062796F41800A6E48F /* RandomUserListTableViewController.swift */,
+				64B0A8EF2797192400D47CF3 /* RandomUserDetailViewController.swift */,
 				64FCDF082796F4AF00A6E48F /* RandomUserCell.swift */,
 			);
 			path = Controllers;
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B0A8F02797192400D47CF3 /* RandomUserDetailViewController.swift in Sources */,
 				64FCDF112796F82B00A6E48F /* RandomUserViewModel.swift in Sources */,
 				64FCDF072796F41800A6E48F /* RandomUserListTableViewController.swift in Sources */,
 				64FCDF16279708A500A6E48F /* UIViewController+Extensions.swift in Sources */,

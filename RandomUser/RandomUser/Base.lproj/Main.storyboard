@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,6 +65,7 @@
                                     <outlet property="email" destination="6Vl-jd-ICz" id="zU5-wG-I2E"/>
                                     <outlet property="name" destination="6kj-Oj-AGH" id="JxW-z3-9pX"/>
                                     <outlet property="userImageView" destination="epk-K5-MDC" id="MNV-Lq-sFi"/>
+                                    <segue destination="Jl7-9a-Slr" kind="showDetail" identifier="showDetail" id="hpq-Xl-Ztl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -95,6 +97,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNi-N5-yU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="99.776785714285708"/>
+        </scene>
+        <!--Random User Detail View Controller-->
+        <scene sceneID="g08-Sk-gnw">
+            <objects>
+                <viewController id="Jl7-9a-Slr" customClass="RandomUserDetailViewController" customModule="RandomUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9CX-dj-lAz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-BN-Vfr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mgO-BN-Vfr" secondAttribute="height" multiplier="1:1" id="FD3-LF-AmL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bio-6G-v7z">
+                                <rect key="frame" x="10" y="424" width="394" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="qQL-pg-fAZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HK-Ci-xNH">
+                                <rect key="frame" x="10" y="456" width="394" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="APn-42-O7V"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="jG7-2z-s5X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN6-HQ-Mhe">
+                                <rect key="frame" x="176" y="527" width="62" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                <connections>
+                                    <action selector="Share:" destination="Jl7-9a-Slr" eventType="touchUpInside" id="2Uu-Ry-f93"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r89-fR-DJu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8HK-Ci-xNH" firstAttribute="top" secondItem="bio-6G-v7z" secondAttribute="bottom" constant="10" id="6Jf-Ee-a9r"/>
+                            <constraint firstItem="bio-6G-v7z" firstAttribute="leading" secondItem="r89-fR-DJu" secondAttribute="leading" constant="10" id="AF7-2A-XHc"/>
+                            <constraint firstItem="8HK-Ci-xNH" firstAttribute="leading" secondItem="r89-fR-DJu" secondAttribute="leading" constant="10" id="MVo-pO-kD5"/>
+                            <constraint firstItem="mgO-BN-Vfr" firstAttribute="trailing" secondItem="r89-fR-DJu" secondAttribute="trailing" id="N5F-fF-5Ay"/>
+                            <constraint firstItem="mgO-BN-Vfr" firstAttribute="top" secondItem="r89-fR-DJu" secondAttribute="top" id="Uhb-7F-dNm"/>
+                            <constraint firstItem="mgO-BN-Vfr" firstAttribute="leading" secondItem="r89-fR-DJu" secondAttribute="leading" id="Y2W-Zg-gkW"/>
+                            <constraint firstItem="aN6-HQ-Mhe" firstAttribute="centerX" secondItem="9CX-dj-lAz" secondAttribute="centerX" id="bLK-pz-wH3"/>
+                            <constraint firstItem="r89-fR-DJu" firstAttribute="trailing" secondItem="bio-6G-v7z" secondAttribute="trailing" constant="10" id="i3n-LV-7dq"/>
+                            <constraint firstItem="r89-fR-DJu" firstAttribute="trailing" secondItem="8HK-Ci-xNH" secondAttribute="trailing" constant="10" id="iCD-aA-qVL"/>
+                            <constraint firstItem="bio-6G-v7z" firstAttribute="top" secondItem="mgO-BN-Vfr" secondAttribute="bottom" constant="10" id="m3X-zg-Qi0"/>
+                            <constraint firstItem="aN6-HQ-Mhe" firstAttribute="top" secondItem="8HK-Ci-xNH" secondAttribute="bottom" constant="50" id="oaC-EJ-tdm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="8HK-Ci-xNH" id="ndl-V0-dIm"/>
+                        <outlet property="name" destination="bio-6G-v7z" id="ZPM-de-5VV"/>
+                        <outlet property="userImageView" destination="mgO-BN-Vfr" id="Ffw-u7-h5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOT-Gv-I70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="82.366071428571431"/>
         </scene>
     </scenes>
     <resources>

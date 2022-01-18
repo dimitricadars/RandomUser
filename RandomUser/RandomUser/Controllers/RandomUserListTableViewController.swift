@@ -58,6 +58,16 @@ extension RandomUserListTableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if let cell = sender as? RandomUserCell {
+            let i = tableView.indexPath(for: cell)!.row
+            if segue.identifier == "showDetail" {
+                let vc = segue.destination as! RandomUserDetailViewController
+                vc.randomUserViewModel = randomUserListViewModel.randomUserViewModels[i]
+            }
+        }
+    }
+    
 }
 
 
