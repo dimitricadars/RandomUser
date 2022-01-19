@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="randomUserCell" rowHeight="108" id="GSs-Mc-88s" customClass="RandomUserCell" customModule="RandomUser" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="randomUserCell" rowHeight="108" id="GSs-Mc-88s" customClass="RandomUserCell" customModule="RandomUser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSs-Mc-88s" id="Xhd-80-JQx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-Oj-AGH">
-                                            <rect key="frame" x="108" y="10" width="296" height="21"/>
+                                            <rect key="frame" x="108" y="10" width="266.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="v4X-ai-Gsp"/>
                                             </constraints>
@@ -34,7 +34,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vl-jd-ICz">
-                                            <rect key="frame" x="108" y="41" width="296" height="21"/>
+                                            <rect key="frame" x="108" y="41" width="266.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="7fj-x6-t93"/>
                                             </constraints>
@@ -139,6 +139,18 @@
                                     <action selector="Share:" destination="Jl7-9a-Slr" eventType="touchUpInside" id="2Uu-Ry-f93"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-7v-ffh">
+                                <rect key="frame" x="374" y="10" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2gm-Qq-z4U"/>
+                                    <constraint firstAttribute="height" constant="30" id="oUz-so-jE8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="Jl7-9a-Slr" eventType="touchUpInside" id="ILe-Um-k1i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r89-fR-DJu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,12 +160,14 @@
                             <constraint firstItem="8HK-Ci-xNH" firstAttribute="leading" secondItem="r89-fR-DJu" secondAttribute="leading" constant="10" id="MVo-pO-kD5"/>
                             <constraint firstItem="mgO-BN-Vfr" firstAttribute="trailing" secondItem="r89-fR-DJu" secondAttribute="trailing" id="N5F-fF-5Ay"/>
                             <constraint firstItem="mgO-BN-Vfr" firstAttribute="top" secondItem="r89-fR-DJu" secondAttribute="top" id="Uhb-7F-dNm"/>
+                            <constraint firstItem="r89-fR-DJu" firstAttribute="trailing" secondItem="dhs-7v-ffh" secondAttribute="trailing" constant="10" id="VhB-B8-XQe"/>
                             <constraint firstItem="mgO-BN-Vfr" firstAttribute="leading" secondItem="r89-fR-DJu" secondAttribute="leading" id="Y2W-Zg-gkW"/>
                             <constraint firstItem="aN6-HQ-Mhe" firstAttribute="centerX" secondItem="9CX-dj-lAz" secondAttribute="centerX" id="bLK-pz-wH3"/>
                             <constraint firstItem="r89-fR-DJu" firstAttribute="trailing" secondItem="bio-6G-v7z" secondAttribute="trailing" constant="10" id="i3n-LV-7dq"/>
                             <constraint firstItem="r89-fR-DJu" firstAttribute="trailing" secondItem="8HK-Ci-xNH" secondAttribute="trailing" constant="10" id="iCD-aA-qVL"/>
                             <constraint firstItem="bio-6G-v7z" firstAttribute="top" secondItem="mgO-BN-Vfr" secondAttribute="bottom" constant="10" id="m3X-zg-Qi0"/>
                             <constraint firstItem="aN6-HQ-Mhe" firstAttribute="top" secondItem="8HK-Ci-xNH" secondAttribute="bottom" constant="50" id="oaC-EJ-tdm"/>
+                            <constraint firstItem="dhs-7v-ffh" firstAttribute="top" secondItem="r89-fR-DJu" secondAttribute="top" constant="10" id="xcH-6I-uNc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -168,6 +182,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cancel" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
